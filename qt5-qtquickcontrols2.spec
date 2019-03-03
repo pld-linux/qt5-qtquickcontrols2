@@ -10,14 +10,14 @@
 Summary:	The Qt5 Quick Controls2 modules
 Summary(pl.UTF-8):	Moduły Qt5 Quick Controls2
 Name:		qt5-%{orgname}
-Version:	5.11.1
+Version:	5.12.1
 Release:	1
 License:	LGPL v3 or GPL v2 or commercial
 Group:		X11/Libraries
-Source0:	http://download.qt.io/official_releases/qt/5.11/%{version}/submodules/%{orgname}-everywhere-src-%{version}.tar.xz
-# Source0-md5:	d74e20323399a05ad0b3e9f0dc419519
-Source1:	http://download.qt.io/official_releases/qt/5.11/%{version}/submodules/qttranslations-everywhere-src-%{version}.tar.xz
-# Source1-md5:	67c0dbd61c2b92552b5339d82a94b1a8
+Source0:	http://download.qt.io/official_releases/qt/5.12/%{version}/submodules/%{orgname}-everywhere-src-%{version}.tar.xz
+# Source0-md5:	85c27b5cefe8abf0e7389e9f132189f5
+Source1:	http://download.qt.io/official_releases/qt/5.12/%{version}/submodules/qttranslations-everywhere-src-%{version}.tar.xz
+# Source1-md5:	045ad1eda4d3a272b24b6c60a06b313f
 URL:		http://www.qt.io/
 BuildRequires:	Qt5Core-devel >= %{qtbase_ver}
 BuildRequires:	Qt5Gui-devel >= %{qtbase_ver}
@@ -163,7 +163,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} -C qttranslations-everywhere-src-%{version} install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT
 # keep only qtquickcontrols
-%{__rm} $RPM_BUILD_ROOT%{_datadir}/qt5/translations/{assistant,designer,linguist,qmlviewer,qt,qtbase,qtconnectivity,qtdeclarative,qtlocation,qtmultimedia,qtquick1,qtquickcontrols,qtserialport,qtscript,qtwebengine,qtwebsockets,qtxmlpatterns}_*.qm
+%{__rm} $RPM_BUILD_ROOT%{_datadir}/qt5/translations/{assistant,designer,linguist,qt,qtbase,qtconnectivity,qtdeclarative,qtlocation,qtmultimedia,qtquickcontrols,qtserialport,qtscript,qtwebengine,qtwebsockets,qtxmlpatterns}_*.qm
 %endif
 
 # find_lang --with-qm supports only PLD qt3/qt4 specific %{_localedir}/*/LC_MESSAGES layout
@@ -215,13 +215,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_docdir}/qt5-doc/qtlabscalendar
 %{_docdir}/qt5-doc/qtlabsplatform
-%{_docdir}/qt5-doc/qtquickcontrols2
+%{_docdir}/qt5-doc/qtquickcontrols
 
 %files doc-qch
 %defattr(644,root,root,755)
 %{_docdir}/qt5-doc/qtlabscalendar.qch
 %{_docdir}/qt5-doc/qtlabsplatform.qch
-%{_docdir}/qt5-doc/qtquickcontrols2.qch
+%{_docdir}/qt5-doc/qtquickcontrols.qch
 %endif
 
 %files examples
