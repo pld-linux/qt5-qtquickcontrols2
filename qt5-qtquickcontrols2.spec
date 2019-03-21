@@ -11,7 +11,7 @@ Summary:	The Qt5 Quick Controls2 modules
 Summary(pl.UTF-8):	Moduły Qt5 Quick Controls2
 Name:		qt5-%{orgname}
 Version:	5.12.2
-Release:	1
+Release:	2
 License:	LGPL v3 or GPL v2 or commercial
 Group:		X11/Libraries
 Source0:	http://download.qt.io/official_releases/qt/5.12/%{version}/submodules/%{orgname}-everywhere-src-%{version}.tar.xz
@@ -58,6 +58,7 @@ Ten pakiet zawiera moduły Qt5 Quick Controls2, Dialogs.
 Summary:	The Qt5 Quick Controls2 modules
 Summary(pl.UTF-8):	Moduły Qt5 Quick Controls2
 Group:		X11/Libraries
+Requires(post,postun):	/sbin/ldconfig
 Requires:	Qt5Core >= %{qtbase_ver}
 Requires:	Qt5Gui >= %{qtbase_ver}
 Requires:	Qt5Qml >= %{qtdeclarative_ver}
@@ -182,6 +183,9 @@ find_qt5_qm qtquickcontrols2 >> qtquickcontrols2.lang
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	Qt5Quick-controls2 -p /sbin/ldconfig
+%postun	Qt5Quick-controls2 -p /sbin/ldconfig
 
 %files -n Qt5Quick-controls2 -f qtquickcontrols2.lang
 %defattr(644,root,root,755)
