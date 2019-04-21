@@ -10,14 +10,14 @@
 Summary:	The Qt5 Quick Controls2 modules
 Summary(pl.UTF-8):	Moduły Qt5 Quick Controls2
 Name:		qt5-%{orgname}
-Version:	5.12.2
-Release:	3
+Version:	5.12.3
+Release:	1
 License:	LGPL v3 or GPL v2 or commercial
 Group:		X11/Libraries
 Source0:	http://download.qt.io/official_releases/qt/5.12/%{version}/submodules/%{orgname}-everywhere-src-%{version}.tar.xz
-# Source0-md5:	3e601a63a160e1a5463e257a18e93a20
+# Source0-md5:	78979a6d1eac38bac8c337af38f07f24
 Source1:	http://download.qt.io/official_releases/qt/5.12/%{version}/submodules/qttranslations-everywhere-src-%{version}.tar.xz
-# Source1-md5:	298e993499be31ab95162b61456a4b25
+# Source1-md5:	7f35815b8231f60c467f51c21998b2a9
 URL:		http://www.qt.io/
 BuildRequires:	Qt5Core-devel >= %{qtbase_ver}
 BuildRequires:	Qt5Gui-devel >= %{qtbase_ver}
@@ -203,6 +203,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/qt5/QtQuickControls2
 %{_includedir}/qt5/QtQuickTemplates2
 %{_libdir}/cmake/Qt5QuickControls2
+%{_libdir}/cmake/Qt5QuickTemplates2
 %{_libdir}/libQt5QuickControls2.la
 %{_libdir}/libQt5QuickControls2.prl
 %{_libdir}/libQt5QuickControls2.so
@@ -210,8 +211,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libQt5QuickTemplates2.prl
 %{_libdir}/libQt5QuickTemplates2.so
 %{_pkgconfigdir}/Qt5QuickControls2.pc
+%{_pkgconfigdir}/Qt5QuickTemplates2.pc
 %{_libdir}/qt5/mkspecs/modules/qt_lib_quickcontrols2.pri
 %{_libdir}/qt5/mkspecs/modules/qt_lib_quickcontrols2_private.pri
+%{_libdir}/qt5/mkspecs/modules/qt_lib_quicktemplates2.pri
 %{_libdir}/qt5/mkspecs/modules/qt_lib_quicktemplates2_private.pri
 
 %if %{with doc}
