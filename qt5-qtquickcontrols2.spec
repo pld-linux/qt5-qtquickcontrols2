@@ -10,14 +10,14 @@
 Summary:	The Qt5 Quick Controls2 modules
 Summary(pl.UTF-8):	Moduły Qt5 Quick Controls2
 Name:		qt5-%{orgname}
-Version:	5.14.0
+Version:	5.14.1
 Release:	1
 License:	LGPL v3 or GPL v2 or commercial
 Group:		X11/Libraries
 Source0:	http://download.qt.io/official_releases/qt/5.14/%{version}/submodules/%{orgname}-everywhere-src-%{version}.tar.xz
-# Source0-md5:	d65587589b2f5b70f8adf721f8101ac3
+# Source0-md5:	8e05118acdee3fe4dc8bbc92c2bcbe49
 Source1:	http://download.qt.io/official_releases/qt/5.14/%{version}/submodules/qttranslations-everywhere-src-%{version}.tar.xz
-# Source1-md5:	74ff09655d412069a7b4210fea5440fb
+# Source1-md5:	ef18bbad424173c3211c2ce0f4074485
 URL:		http://www.qt.io/
 BuildRequires:	Qt5Core-devel >= %{qtbase_ver}
 BuildRequires:	Qt5Gui-devel >= %{qtbase_ver}
