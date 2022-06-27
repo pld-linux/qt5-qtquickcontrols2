@@ -10,14 +10,14 @@
 Summary:	The Qt5 Quick Controls2 modules
 Summary(pl.UTF-8):	Moduły Qt5 Quick Controls2
 Name:		qt5-%{orgname}
-Version:	5.15.4
+Version:	5.15.5
 Release:	1
 License:	LGPL v3 or GPL v2+ or commercial
 Group:		X11/Libraries
 Source0:	https://download.qt.io/official_releases/qt/5.15/%{version}/submodules/%{orgname}-everywhere-opensource-src-%{version}.tar.xz
-# Source0-md5:	7ec11c027860204fcea743c0f6f5d8bd
+# Source0-md5:	1d3986cc6b4c325fcf4d933ef7b32aa7
 Source1:	https://download.qt.io/official_releases/qt/5.15/%{version}/submodules/qttranslations-everywhere-opensource-src-%{version}.tar.xz
-# Source1-md5:	6ba46a712a698118f396f78a785f6774
+# Source1-md5:	fa34c5c6f4facdfa18055c15532dd138
 URL:		http://www.qt.io/
 BuildRequires:	Qt5Core-devel >= %{qtbase_ver}
 BuildRequires:	Qt5Gui-devel >= %{qtbase_ver}
@@ -256,7 +256,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt5/qml/QtQuick/Controls.2/Imagine/*.qml
 %dir %{_libdir}/qt5/qml/QtQuick/Controls.2/Material
 # R: Core Gui Qml Quick QuickControls2 QuickTemplates2
-%attr(755,root,root) %{_libdir}/qt5/qml/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin.so
+%attr(755,root,root) %{_libdir}/qt5/qml/QtQuick/Controls.2/Material/libqqc2materialstyleplugin.so
 %{_libdir}/qt5/qml/QtQuick/Controls.2/Material/plugins.qmltypes
 %{_libdir}/qt5/qml/QtQuick/Controls.2/Material/qmldir
 %{_libdir}/qt5/qml/QtQuick/Controls.2/Material/*.qml
