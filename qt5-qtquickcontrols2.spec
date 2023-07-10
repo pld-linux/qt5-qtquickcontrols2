@@ -60,7 +60,7 @@ Summary:	The Qt5 Quick Controls2 modules
 Summary(pl.UTF-8):	Moduły Qt5 Quick Controls2
 Group:		X11/Libraries
 Requires(post,postun):	/sbin/ldconfig
-Requires:	Qt5Core >= %{qtbase_ver}
+%requires_eq_to	Qt5Core Qt5Core-devel
 Requires:	Qt5Gui >= %{qtbase_ver}
 Requires:	Qt5Qml >= %{qtdeclarative_ver}
 Requires:	Qt5Quick >= %{qtdeclarative_ver}
